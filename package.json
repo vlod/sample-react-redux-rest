@@ -1,0 +1,43 @@
+{
+  "name": "presidents",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "server": "node ./bin/www",
+    "test_server": "NODE_ENV=test mocha --reporter list --recursive --watch test",
+    "test_server_debug": "NODE_ENV=test mocha --inspect-brk  --reporter list --recursive test"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "helmet": "^3.6.1",
+    "immutable": "^3.8.1",
+    "morgan": "^1.8.2",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-immutable-proptypes": "^2.1.0",
+    "react-redux": "^5.0.5",
+    "react-router": "^3.0.5",
+    "react-scripts": "^1.0.10",
+    "redux": "^3.7.1",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "debug": "^2.6.8",
+    "eslint": "^3.19.x",
+    "eslint-config-airbnb": "^15.0.x",
+    "eslint-plugin-import": "^2.3.x",
+    "eslint-plugin-jsx-a11y": "^5.0.x",
+    "eslint-plugin-react": "^7.0.x",
+    "mocha": "^3.4.2",
+    "nock": "^9.0.13",
+    "supertest": "^3.0.0"
+  },
+  "proxy": "http://localhost:3001"
+}
