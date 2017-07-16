@@ -11,7 +11,7 @@ export const fetchPresidents = () => {
   return (dispatch) => {
     dispatch({ type: FETCHED_PRESIDENTS_STATUS, payload: 'LOADING' });
 
-    fetch('/api/presidents')
+    return fetch('/api/presidents')
       .then(response => response.json())
       .then((results) => {
         dispatch({ type: FETCHED_PRESIDENTS, payload: results });
@@ -26,7 +26,7 @@ export const fetchPresidents = () => {
 
 export const fetchPresident = (number) => {
   return (dispatch) => {
-    fetch(`/api/presidents/${number}`)
+    return fetch(`/api/presidents/${number}`)
       .then(response => response.json())
       .then(results => dispatch({ type: FETCHED_PRESIDENT, payload: results }))
       .catch((err) => {

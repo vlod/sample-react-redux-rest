@@ -1,8 +1,7 @@
 /* global it, describe */
-const expect = require('chai').expect;
 const request = require('supertest');
 
-const app = require('../../app');
+const app = require('../../../app');
 
 describe('routes.api', () => {
   it('should return list of presidents', (done) => {
